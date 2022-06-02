@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&family=Lexend+Deca:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+nav{
+   background-color: black;
+   color: white;
+   height: 2rem;
+   font-size: 1rem;
+   display: flex;
+   align-items: center;
+   padding: 0 2rem;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.gameInfo{
+    font-size: 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(250, 230, 250);
+}
+
+.info{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.gameInfo{
+    padding: 0 3rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: rgb(233, 223, 241);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.line{
+    background-color: purple;
+    width: 0;
+    height: 3px;
+    border-radius: 3px;
+    position: absolute;
+    transition: width 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1250px)
+{
+   .game{
+       flex-wrap: wrap;
+   }
+   .gameInfo{
+       margin-top: 34px;
+   }
+   .gameInfo h1{
+       font-size: 1.5rem;
+   }
+   .container{
+       grid-template-rows: repeat(3, 20vw);
+       grid-template-columns: repeat(3, 20vw);
+   }   
+}    
